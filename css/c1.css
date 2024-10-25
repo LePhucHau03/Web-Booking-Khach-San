@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Màu nền trắng */
+    color: #333;
+}
+
+#header {
+    background-color: #f5e6d4; /* Màu da nhẹ */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2em;
+    border-bottom: 2px solid #d4af8f; /* Đường viền màu da đậm */
+}
+
+nav {
+    background-color: #ffffff; /* Màu nền trắng cho menu */
+    padding: 10px 0;
+    border-bottom: 2px solid #d4af8f; /* Đường viền dưới màu da */
+    text-align: center;
+}
+
+nav a {
+    color: #333; /* Màu chữ đen */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: color 0.3s ease, border 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+nav a:hover {
+    color: white; /* Đổi màu chữ thành trắng khi hover */
+    border: 2px solid #d4af8f; /* Khung màu da khi hover */
+    background-color: #d4af8f; /* Thêm nền màu da khi hover */
+    border-radius: 15px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px; /* Bo tròn các góc của main */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #d4af8f; /* Màu da */
+    border-bottom: 2px solid #d4af8f; /* Đường viền dưới màu da */
+    padding-bottom: 10px;
+}
+
+#data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#data div {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Đặt bo tròn các góc của khung */
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); /* 3 cột */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Chỉ áp dụng hiệu ứng cho khung */
+    background-color: #f5e6d4; /* Màu nền da cho các đối tượng */
+}
+
+#data div:hover {
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+}
+
+#data div:hover * {
+    transform: none; /* Không phóng to chữ khi hover */
+}
+
+img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5e6d4; /* Màu da nhẹ */
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Styles for login and register buttons */
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.auth-buttons button {
+    background-color: #d4af8f; /* Màu da đậm */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+
+.auth-buttons button:hover {
+    background-color: #c79b7e; /* Đổi màu đậm hơn khi hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #data div {
+        flex: 1 1 calc(45% - 20px); /* 2 cột cho màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    #data div {
+        flex: 1 1 100%; /* 1 cột cho màn hình rất nhỏ */
+    }
+}

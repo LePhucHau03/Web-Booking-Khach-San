@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/c1.css">
+    <title>Khách sạn Zeix</title>
+</head>
+<body>
+    <header id="header">
+        <div class="logo-container">
+            <img src="images/logo1.png" alt="Logo Khách sạn Zeix" class="logo">
+            <span>Chào mừng đến với khách sạn Zeix</span>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-register">Đăng ký</button>
+            <button class="btn-login">Đăng nhập</button>
+        </div>
+    </header>
+
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listphong">Phòng</a>
+        <a href="#listbuffet">Buffet</a>
+        <a href="#listhoboi">Hồ bơi</a>
+        <a href="#listgym">Phòng gym</a>
+    </nav>
+
+    <main> 
+        <section id="listphong">
+            <h2>Danh Sách Phòng</h2>
+            <div id="data">
+                <div class="item">
+                    <h3>Phòng VIP</h3>
+                    <p>Mô tả chi tiết phòng VIP.</p>
+                </div>
+                <div class="item">
+                    <h3>Phòng Standard</h3>
+                    <p>Mô tả chi tiết phòng Standard.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="listbuffet">
+            <h2>Danh Sách Buffet</h2>
+            <div id="data">
+                <div class="item">
+                    <h3>Buffet Sáng</h3>
+                    <p>Thực đơn buffet sáng với nhiều món ăn phong phú.</p>
+                </div>
+                <div class="item">
+                    <h3>Buffet Trưa</h3>
+                    <p>Thực đơn buffet trưa đặc biệt.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="listhoboi">
+            <h2>Danh Sách Hồ Bơi</h2>
+            <div id="data">
+                <div class="item">
+                    <h3>Hồ Bơi Trong Nhà</h3>
+                    <p>Mô tả về hồ bơi trong nhà.</p>
+                </div>
+                <div class="item">
+                    <h3>Hồ Bơi Ngoài Trời</h3>
+                    <p>Mô tả về hồ bơi ngoài trời.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="listgym">
+            <h2>Danh Sách Gym</h2>
+            <div id="data">
+                <div class="item">
+                    <h3>Phòng Gym Hiện Đại</h3>
+                    <p>Mô tả về phòng gym hiện đại.</p>
+                </div>
+                <div class="item">
+                    <h3>Phòng Tập Yoga</h3>
+                    <p>Mô tả về phòng tập yoga.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer> Họ tên sinh viên: Lê Phúc Hậu - PS35619</footer>
+
+    <script type="module">
+        import { showlistphong, showlistbuffet, showlisthoboi, showlistgym } from './js/app.js';
+        document.querySelector("#listphong #data").innerHTML = showlistphong();
+        document.querySelector("#listbuffet #data").innerHTML = showlistbuffet();
+        document.querySelector("#listhoboi #data").innerHTML = showlisthoboi();
+        document.querySelector("#listgym #data").innerHTML = await showlistgym();
+    </script>
+</body>
+</html>
